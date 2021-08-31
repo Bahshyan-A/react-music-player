@@ -61,6 +61,39 @@ function chillHop() {
       id: uuidv4(),
       active: false,
     },
+    {
+      name: "Snowstalgia",
+      cover:
+      'https://chillhop.com/wp-content/uploads/2020/10/0e5bb63f838ff92eeac142aae944e9f678df13c9-150x150.jpg',
+      artist: "invention_",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=10074",
+      color: ["#205950", "#2ab3bf"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Leaves covered by snow",
+      cover:
+      'https://chillhop.com/wp-content/uploads/2020/07/4b06cedf68f3f842d3a0fc13ae62564dec6056c8-150x150.jpg',
+      artist: "No Spirit",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=10074",
+      color: ["#205950", "#2ab3bf"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Drawing Dunes",
+      cover:
+      'https://chillhop.com/wp-content/uploads/2020/07/5c2d5b05dfc98afb5ed850ca918f732445b8ca1e-150x150.jpg',
+      artist: "Matt Quentin",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=10074",
+      color: ["#205950", "#2ab3bf"],
+      id: uuidv4(),
+      active: false,
+    },
+    
+    
+    
     
   ];
 }
