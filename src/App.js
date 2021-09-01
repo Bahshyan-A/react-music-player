@@ -5,7 +5,6 @@ import "./styles/app.scss";
 import data from './data';
 import Library from './components/Library.component';
 import Nav from './components/Nav.component';
-import {playAudio} from './util';
 
 function App() {
   //Ref
@@ -34,8 +33,14 @@ function App() {
     setSongInfo({ ...songInfo, currentTime: current, duration: duration, animationProcentage:animation });
   };
 
+  const endSongHandler = async () => {
+    let currentIndex = songs.findIndex((song) => song.id === currentSong.id);
+    await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
+    if(isPlaying) {audioRef.current.play()}; 
+  };
+
   return (
-    <div className="App">
+    <div className={`App ${libraryStatus ? "library-active" : ""}`}>
       <Nav 
         libraryStatus={libraryStatus}
         setLibraryStatus = {setLibraryStatus}
@@ -65,6 +70,7 @@ function App() {
         onTimeUpdate={timeUpdateHandler}
         ref={audioRef}
         src={currentSong.audio}
+        onEnded={endSongHandler}
       ></audio>
     </div>
   );

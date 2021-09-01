@@ -34,6 +34,7 @@
     align-items: center;
     padding: 1rem 2rem 1rem 2rem;
     cursor: pointer;
+    transition: all 0.75s ease-out;
     img{
         width: 30%;
     }
@@ -62,3 +63,21 @@
     transform: translateX(0%);
     opacity: 1;
 }
+
+@media screen and (max-width: 768px) {
+    .library {
+      width: 100%;
+    }
+  }
+
+  *::-webkit-scrollbar {
+    width: 5px;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: rgba(155, 155, 155, 0.7);
+    border-radius: 20px;
+    border: transparent;
+  }
